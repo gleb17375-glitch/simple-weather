@@ -1,0 +1,28 @@
+:root {
+    --bg-primary: #000;
+    --bg-secondary: rgba(175, 181, 195, 0.15);
+    --primary: rgb(242, 244, 248);
+    --secondary: rgba(229, 238, 255, 0.5);
+    --accent: #ff4000;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, ui-monospace, monospace, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--primary);
+}
+
+.title {
+    /* color: red; */
+}
+
+.container {
+    display: flex;
+}
+
+.item {
+    flex: 1 1 0;
+    background-color: var(--bg-secondary);
+    aspect-ratio: 8 / 3;
+    border-radius: 21px;
+}
