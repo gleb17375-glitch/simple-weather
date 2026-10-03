@@ -10,14 +10,17 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, ui-monospace, monospace, sans-serif;
     background-color: var(--bg-primary);
     color: var(--primary);
+    margin: unset;
 }
 
 .title {
+    padding: 0 34px;
     /* color: red; */
 }
 
 .container {
     display: flex;
+    margin: 21px;
 }
 
 .item {
