@@ -1,5 +1,5 @@
-const getData = async () => {
-  const url = "https://geocoding-api.open-meteo.com/v1/search?name=Berlin";
+const getData = async (cityName) => {
+  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -13,16 +13,30 @@ const getData = async () => {
   }
 }
 
-function changeText(text) {
+const changeText = (text) => {
   const elem = document.getElementById("title");
   elem.innerText = text
 }
 
-const main = () => {
-    getData().then((response) => {
-        if (!response) return;
-        changeText(response.results[0]?.name)
+const initSeachElement = () => {
+    const searchBar = document.getElementById("searchBar");
+    searchBar.addEventListener("click", () => {
+        searchBar.children[0].focus()
     })
+    searchBar.addEventListener("submit", (e) => {
+        e.preventDefault();
+        getData(searchBar.children[0].value).then((response) => {
+            if (!response || !response.results) {alert("data fetch error"); return;}
+            changeText(response.results[0]?.name)
+        })
+    })
+}
+
+
+const main = () => {
+    
+
+    initSeachElement()
 }
 
 main()
