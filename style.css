@@ -14,13 +14,13 @@ body {
 }
 
 .title {
-    padding: 0 34px;
+    padding: 0 21px;
     /* color: red; */
 }
 
 .container {
     display: flex;
-    margin: 21px;
+    margin: 0 13px;
 }
 
 .item {
