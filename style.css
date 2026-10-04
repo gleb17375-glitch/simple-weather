@@ -21,11 +21,35 @@ body {
 .container {
     display: flex;
     margin: 0 13px;
+    flex-direction: column;
+
 }
 
-.item {
+.searchIcon {
+
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+
+    flex: 1 1 0;
+    background-color: var(--bg-secondary);
+    aspect-ratio: 21 / 3;
+    border-radius: 21px;
+    margin-bottom: 13px;
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    background: transparent;
+}
+
+.card {
     flex: 1 1 0;
     background-color: var(--bg-secondary);
     aspect-ratio: 8 / 3;
     border-radius: 21px;
+    margin-bottom: 13px;
 }
