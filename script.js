@@ -26,8 +26,8 @@ const initSeachElement = () => {
     searchBar.addEventListener("submit", (e) => {
         e.preventDefault();
         getData(searchBar.children[0].value).then((response) => {
-            if (!response || !response.results) {alert("Что-то пошло не так!"); return;}
-            if (!response || !response.results) {alert("Город не найден."); return;}
+            if (!response) {alert("Что-то пошло не так!"); return;}
+            if (!response.results) {alert("Город не найден."); return;}
             changeText(response.results[0]?.name)
         })
     })
