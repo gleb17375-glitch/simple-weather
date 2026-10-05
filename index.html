@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Как погода?</title>
+    <title>Simple Weather</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="title" id="title">Доброго вечера</h1>
+    <h1 class="title" id="title">Hello.</h1>
     <div class="container">
 
         <form class="searchBar" id="searchBar"> 
-            <input placeholder="Город" id="citySearch" class="input" id="input">
+            <input placeholder="City" id="citySearch" class="input" id="input">
              <div class="searchIcon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="7"></circle>
@@ -20,7 +20,10 @@
             </div>
         </form>
 
-        <div class="card"></div>
+        <div class="card">
+            <h3>at <span id="time">--:--</span></h3>
+            <h2 id="temprature">--°C</h2>
+        </div>
     </div>
 <script src="./script.js"></script>
 </body>
