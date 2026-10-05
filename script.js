@@ -34,7 +34,7 @@ const makeRequests = async () => {
     const geoResponce = await getData(weatherUrl)
     if (!geoResponce) 
       {alert("Что-то пошло не так! (Получение данных о погоде)"); return;}
-    const temprature = geoResponce.current.temperature_2m + geoResponce.current_units.temperature_2m
+    const temprature = geoResponce.current.temperature_2m + ' ' + geoResponce.current_units.temperature_2m
     const time = new Date(Date.parse(geoResponce.current.time))
     changeCard(time.toTimeString().slice(0, 5), temprature)
 }
