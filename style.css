@@ -15,7 +15,6 @@ body {
 
 .title {
     padding: 0 21px;
-    /* color: red; */
 }
 
 .container {
@@ -63,4 +62,13 @@ body {
     margin-bottom: 13px;
 
     padding: 0 34px;
+}
+
+@media (600px <= width) {
+    .title {
+        color: red !important;
+    }
+    .container {
+        flex-direction: row;
+    }
 }
