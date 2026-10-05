@@ -36,19 +36,21 @@ const makeRequests = async () => {
       {alert("Что-то пошло не так! (Получение данных о погоде)"); return;}
     const temprature = geoResponce.current.temperature_2m + geoResponce.current_units.temperature_2m
     const time = new Date(Date.parse(geoResponce.current.time))
-    console.log(temprature)
-    console.log(time.toTimeString().slice(0, 5))
     changeCard(time.toTimeString().slice(0, 5), temprature)
 }
 
 const initSeachElement = () => {
     const searchBar = document.getElementById("searchBar");
+    const searchIcon = document.getElementById("searchIcon");
     searchBar.addEventListener("click", () => {
         searchBar.children[0].focus()
     })
     searchBar.addEventListener("submit", (e) => {
         e.preventDefault();
         makeRequests();
+    })
+    searchIcon.addEventListener("click", () => {
+      searchBar.dispatchEvent(new Event('submit'))
     })
 }
 
