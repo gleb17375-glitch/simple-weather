@@ -1,88 +1,86 @@
 :root {
-    --bg-primary: #000;
-    --bg-secondary: rgba(175, 181, 195, 0.15);
-    --primary: rgb(242, 244, 248);
-    --secondary: rgba(229, 238, 255, 0.5);
-    --accent: #ff4000;
+  --bg-primary: #000;
+  --bg-secondary: rgba(175, 181, 195, 0.15);
+  --primary: rgb(242, 244, 248);
+  --secondary: rgba(229, 238, 255, 0.5);
+  --accent: #ff4000;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, ui-monospace, monospace, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--primary);
-    margin: unset;
+  font-family:
+    -apple-system, BlinkMacSystemFont, ui-monospace, monospace, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--primary);
+  margin: unset;
 }
 
 .title {
-    padding: 0 21px;
+  padding: 0 21px;
 }
 
 .container {
-    display: flex;
-    margin: 0 13px;
-    flex-direction: column;
-
+  display: flex;
+  margin: 0 13px;
+  flex-direction: column;
 }
 
 .searchIcon {
-
 }
 
 .searchBar {
-    box-sizing: border-box;
-    width: 100%;
+  box-sizing: border-box;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    flex: 1 1 0;
-    background-color: var(--bg-secondary);
-    aspect-ratio: 21 / 3;
-    border-radius: 21px;
-    margin-bottom: 13px;
+  flex: 1 1 0;
+  background-color: var(--bg-secondary);
+  aspect-ratio: 21 / 3;
+  border-radius: 21px;
+  margin-bottom: 13px;
 
-    padding: 0 21px;
+  padding: 0 21px;
 
-    max-height: 80px;
+  max-height: 80px;
 }
 
 .input {
-    width: 100%;
-    outline: none;
-    background: transparent;
-    border: none;
-    color: var(--primary);
-    font-size: 1.5em;
-    height: 100%;
+  width: 100%;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 1.5em;
+  height: 100%;
 }
 
 .card {
-    flex: 1 1 0;
-    background-color: var(--bg-secondary);
-    aspect-ratio: 13 / 3;
-    border-radius: 21px;
-    margin-bottom: 13px;
+  flex: 1 1 0;
+  background-color: var(--bg-secondary);
+  aspect-ratio: 13 / 3;
+  border-radius: 21px;
+  margin-bottom: 13px;
 
-    padding: 0 34px;
-    max-height: 160px;
-
+  padding: 0 34px;
+  max-height: 160px;
 }
 
 @media (600px <= width) {
-    .title {
-        font-size: 100px;
-    }
-    .card {
-        aspect-ratio: 8 / 3;
-        font-size: 24px;
-    }
-    .searchBar {
-        margin-right: 13px;
-    }
-    .input {
-        font-size: 36px;
-    }
-    .container {
-        flex-direction: row;
-    }
+  .title {
+    font-size: 100px;
+  }
+  .card {
+    aspect-ratio: 8 / 3;
+    font-size: 24px;
+  }
+  .searchBar {
+    margin-right: 13px;
+  }
+  .input {
+    font-size: 36px;
+  }
+  .container {
+    flex-direction: row;
+  }
 }

@@ -72,7 +72,10 @@ const makeRequests = async () => {
     return;
   }
 
-  const temprature = geoResponse.current.temperature_2m + ' ' + geoResponse.current_units.temperature_2m;
+  const temprature =
+    geoResponse.current.temperature_2m +
+    ' ' +
+    geoResponse.current_units.temperature_2m;
   const time = new Date(Date.parse(geoResponse.current.time));
   changeCard(time.toTimeString().slice(0, 5), temprature);
 };
