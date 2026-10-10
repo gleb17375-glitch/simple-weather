@@ -42,6 +42,8 @@ body {
     margin-bottom: 13px;
 
     padding: 0 21px;
+
+    max-height: 80px;
 }
 
 .input {
@@ -57,16 +59,28 @@ body {
 .card {
     flex: 1 1 0;
     background-color: var(--bg-secondary);
-    aspect-ratio: 8 / 3;
+    aspect-ratio: 13 / 3;
     border-radius: 21px;
     margin-bottom: 13px;
 
     padding: 0 34px;
+    max-height: 160px;
+
 }
 
 @media (600px <= width) {
     .title {
-        color: red !important;
+        font-size: 100px;
+    }
+    .card {
+        aspect-ratio: 8 / 3;
+        font-size: 24px;
+    }
+    .searchBar {
+        margin-right: 13px;
+    }
+    .input {
+        font-size: 36px;
     }
     .container {
         flex-direction: row;
