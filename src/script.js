@@ -76,7 +76,9 @@ const handleSearch = async () => {
   const cityResponse = await getData(geoUrl);
 
   if (!cityResponse || !cityResponse.results?.length) {
-    alert(cityResponse ? 'Город не найден.' : 'Что-то пошло не так! (Поиск города)');
+    alert(
+      cityResponse ? 'Город не найден.' : 'Что-то пошло не так! (Поиск города)'
+    );
     return;
   }
 

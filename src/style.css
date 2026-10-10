@@ -11,7 +11,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, ui-monospace, monospace, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, ui-monospace, monospace, sans-serif;
   background-color: var(--bg-primary);
   color: var(--primary);
   margin: 0;
