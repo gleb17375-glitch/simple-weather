@@ -1,0 +1,92 @@
+:root {
+  --bg-primary: #000;
+  --bg-secondary: rgba(175, 181, 195, 0.15);
+  --primary: rgb(242, 244, 248);
+  --secondary: rgba(229, 238, 255, 0.5);
+  --accent: #ff4000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, ui-monospace, monospace, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--primary);
+  margin: 0;
+}
+
+.title {
+  padding: 0 21px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 13px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 0;
+  background-color: var(--bg-secondary);
+  aspect-ratio: 21 / 3;
+  border-radius: 21px;
+  margin-bottom: 13px;
+  padding: 0 21px;
+  max-height: 80px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 1.5em;
+}
+
+.searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card {
+  flex: 1 1 0;
+  background-color: var(--bg-secondary);
+  aspect-ratio: 13 / 3;
+  border-radius: 21px;
+  margin-bottom: 13px;
+  padding: 0 34px;
+  max-height: 160px;
+}
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 100px;
+  }
+
+  .card {
+    aspect-ratio: 8 / 3;
+    font-size: 24px;
+  }
+
+  .searchBar {
+    margin-right: 13px;
+  }
+
+  .input {
+    font-size: 36px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+}

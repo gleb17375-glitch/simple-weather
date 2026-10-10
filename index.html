@@ -4,14 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Simple Weather</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <h1 class="title" id="title">Hello.</h1>
+
     <div class="container">
       <form class="searchBar" id="searchBar">
-        <input placeholder="City" id="citySearch" class="input" id="input" />
-        <div class="searchIcon" id="searchIcon">
+        <input
+          id="citySearch"
+          class="input"
+          type="text"
+          placeholder="City"
+          aria-label="City"
+        />
+        <div
+          class="searchIcon"
+          id="searchIcon"
+          role="button"
+          tabindex="0"
+          aria-label="Search city"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -31,9 +44,10 @@
 
       <div class="card">
         <h3>at <span id="time">--:--</span></h3>
-        <h2 id="temprature">--°C</h2>
+        <h2 id="temperature">--°C</h2>
       </div>
     </div>
-    <script src="./script.js"></script>
+
+    <script src="./src/script.js"></script>
   </body>
 </html>
